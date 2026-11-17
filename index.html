@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数学の発想ノート</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-top">
+          <h1 class="app-title">数学の発想ノート</h1>
+          <div id="account-bar" class="account-bar"></div>
+        </div>
+        <nav id="main-nav" class="main-nav" aria-label="主要メニュー" hidden>
+          <button type="button" class="nav-btn" data-route="list">一覧</button>
+          <button type="button" class="nav-btn" data-route="form">+ 記録を追加</button>
+          <button type="button" class="nav-btn" data-route="analysis">学習の整理</button>
+          <button type="button" class="nav-btn" data-route="data">データ・設定</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content" id="main-content" tabindex="-1">
+      <div id="status-banner" class="status-banner" role="status" aria-live="polite" hidden></div>
+      <div id="view-root"></div>
+    </main>
+  </div>
+
+  <!-- 画像拡大モーダル -->
+  <div id="image-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title">画像の拡大表示</h2>
+        <button type="button" id="modal-close-btn" class="btn btn-secondary btn-sm">閉じる</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="拡大画像" class="modal-img">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
